@@ -44,3 +44,46 @@ for (var i = 0 ; i < pacientes.length ; i++) {
 
 	console.log(paciente.textContent);//tr
 }
+
+
+
+var botaoAdicionar = document.querySelector("#adicionar-paciente");
+botaoAdicionar.addEventListener("click", function(){
+	event.preventDefault(event);//utilizando preventdefault para previnir o comportamento padrão de usuários do browser, nesse caso, canelar o do formulário 	
+
+	var form = document.querySelector("#form-adiciona");
+	//pegando os dados do form e armazenando em variaveis
+	var nome = form.nome.value;
+	var peso = form.peso.value;
+	var altura = form.altura.value;
+	var gordura = form.gordura.value;
+	//criando tr
+	var pacienteTr = document.createElement("tr");
+	//criando tds
+	var nomeTd =  document.createElement("td");
+	var pesoTd =  document.createElement("td");
+	var alturaTd =  document.createElement("td");
+	var gorduraTd =  document.createElement("td");
+	var imcTd =  document.createElement("td");
+	//preenchendo tds com valores do form
+	nomeTd.textContent = nome;
+	pesoTd.textContent = peso;
+	alturaTd.textContent = altura;
+	gorduraTd.textContent = gordura;
+	//adicionando os valores dentro dos trs
+	pacienteTr.appendChild(nomeTd);
+	pacienteTr.appendChild(pesoTd);
+	pacienteTr.appendChild(alturaTd);
+	pacienteTr.appendChild(gorduraTd);
+	//levando o td criado para dentro da tabela
+	var tabela = document.querySelector("#tabela-pacientes");
+	tabela.appendChild(pacienteTr);
+
+
+})
+
+titulo.addEventListener("click",mostraMensagem); //ao inves de mostra mensage, pode ser passada uma função anonima <function(){console.log("Olha só, anonimamente");}
+
+function mostraMensagem(){
+	console.log("Olá, eu fui clicado!");
+}
