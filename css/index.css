@@ -138,3 +138,8 @@ button[disabled=disabled], button:disabled {
 .paciente-invalido{
 	background-color: orange;
 }
+
+#mensagem-erro{
+	color:red;
+	background-color: yellow;
+}
