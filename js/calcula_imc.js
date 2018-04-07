@@ -61,16 +61,9 @@ function validaAltura(altura){
 
 function calculaImc(peso,altura){
 	var imc = 0;
-
 	imc = peso / (altura * altura);
-
 	return imc.toFixed(2);
 }
 
 
 
-titulo.addEventListener("click",mostraMensagem); //ao inves de mostra mensage, pode ser passada uma função anonima <function(){console.log("Olha só, anonimamente");}
-
-function mostraMensagem(){
-	console.log("Olá, eu fui clicado!");
-}
